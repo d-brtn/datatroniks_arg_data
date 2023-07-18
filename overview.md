@@ -23,32 +23,32 @@ h1. Inital flow
     membersInArc --> awestone;
     
     membersInArc --> botanifanatic;
-    
-    subgraph botanifanatic
-        botanifanatic.full_name--> Laurie_Kozlowski
+    subgraph membersInArc;
+        subgraph botanifanatic
+            botanifanatic.full_name--> Laurie_Kozlowski
+        end
+
+        subgraph kimmy911
+            kimmy911.full_name--> Kim_Feinhorn
+        end
+
+        subgraph mysticaldave
+            mysticaldave.full_name--> Dave_Larson
+        end
+
+        subgraph westsideriot
+            westsideriot.full_name--> Rodney_Lewis
+        end
+
+        subgraph awestone
+            awestone.full_name--> Connor_MacPhain
+        end
+
+        subgraph artsmart
+            artsmart.full_name-->  Travis_Conrad
+        end
     end
 
-    subgraph kimmy911
-        kimmy911.full_name--> Kim_Feinhorn
-    end
-
-    subgraph mysticaldave
-        mysticaldave.full_name--> Dave_Larson
-    end
-
-    subgraph westsideriot
-        westsideriot.full_name--> Rodney_Lewis
-    end
-
-    subgraph awestone
-        awestone.full_name--> Connor_MacPhain
-    end
-
-    subgraph artsmart
-        artsmart.full_name-->  Travis_Conrad
-    end
-
-artsmart
 
 
 
