@@ -24,6 +24,8 @@ h1. Inital flow
     
     membersInArc --> botanifanatic;
     subgraph membersInArc;
+    direction LR
+
         subgraph botanifanatic
             botanifanatic.full_name--> Laurie_Kozlowski
         end
