@@ -1,4 +1,4 @@
-h1. Inital flow
+# Draft of information so far
 
 ```mermaid
     flowchart TD
@@ -12,45 +12,50 @@ h1. Inital flow
     blurtout --> B;
     blurtout --> G[mezoscape.com];
     blurtout --> members['/members'];
+    blurtout --> blurtout.majortopics[Major Topics]
     
     
-    members --> membersInArc[Members in Arc];
-    members --> players[Members not in Arc];
+    subgraph BlurtOut;
+        blurtout.majortopics --> blurtout.majortopics.2020_cyber_attack
     
-    
-    
-    membersInArc --> artsmart;
-    membersInArc --> awestone;
-    
-    membersInArc --> botanifanatic;
-    subgraph membersInArc;
-    direction LR
+        members --> membersInArc[Members in Arc];
+        members --> players[Members not in Arc];
+        
+        
+        
+        membersInArc --> artsmart;
+        membersInArc --> awestone;
+        
+        membersInArc --> botanifanatic;
+        subgraph membersInArc;
+        direction LR
 
-        subgraph botanifanatic
-            botanifanatic.full_name--> Laurie_Kozlowski
-        end
+            subgraph botanifanatic
+                botanifanatic.full_name--> Laurie_Kozlowski
+            end
 
-        subgraph kimmy911
-            kimmy911.full_name--> Kim_Feinhorn
-        end
+            subgraph kimmy911
+                kimmy911.full_name--> Kim_Feinhorn
+                kimmy911.media --> cyber_attack_2020.newspaper.jpg
+            end
 
-        subgraph mysticaldave
-            mysticaldave.full_name--> Dave_Larson
-        end
+            subgraph mysticaldave
+                mysticaldave.full_name--> Dave_Larson
+            end
 
-        subgraph westsideriot
-            westsideriot.full_name--> Rodney_Lewis
-        end
+            subgraph westsideriot
+                westsideriot.full_name--> Rodney_Lewis
+            end
 
-        subgraph awestone
-            awestone.full_name--> Connor_MacPhain
-        end
+            subgraph awestone
+                awestone.full_name--> Connor_MacPhain
+            end
 
-        subgraph artsmart
-            artsmart.full_name-->  Travis_Conrad
+            subgraph artsmart
+                artsmart.full_name-->  Travis_Conrad
+            end
         end
     end
-
 
 
 
