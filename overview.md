@@ -1,4 +1,4 @@
-# Draft of information so far
+h1. Inital flow
 
 ```mermaid
     flowchart TD
@@ -11,57 +11,89 @@
     blurtout --> F[concorrections.com];
     blurtout --> B;
     blurtout --> G[mezoscape.com];
-    blurtout --> members['/members'];
-    blurtout --> blurtout.majortopics[Major Topics]
+
     
     
-    subgraph BlurtOut;
-        blurtout.majortopics --> blurtout.majortopics.2020_cyber_attack
+    members --> players[Members not in Arc];
+    blurtout --> blurtout_data;
     
-        members --> membersInArc[Members in Arc];
-        members --> players[Members not in Arc];
+
+    subgraph dontswimuphill_data;
+    direction LR
+        dontswimuphill.households --> dontswimuphill.locations
+        
+        dontswimuphill.locations --> dontswimuphill.locations.White_River_City[White_River_City]
+        dontswimuphill.locations --> dontswimuphill.locations.Cicada_Cove[Cicada_Cove]
+        dontswimuphill.locations --> dontswimuphill.locations.Oakenvilleburg[Oakenvilleburg]
+        dontswimuphill.locations --> dontswimuphill.locations.Spitshire_Grove[Spitshire_Grove]
+        dontswimuphill.locations --> dontswimuphill.locations.Santa_Mesa[Santa_Mesa]
+        dontswimuphill.locations --> dontswimuphill.locations.New_Lake_Falls[New_Lake_Falls]
+        dontswimuphill.locations --> dontswimuphill.locations.Snakecave_Mounds[Snakecave_Mounds]
+        dontswimuphill.locations --> dontswimuphill.locations.Estrada_Beach[Estrada_Beach]        
+        
+
+
+        
+        dontswimuphill.locations.White_River_City --> tymborlyn.White_River_City & pascal.White_River_City & stone.White_River_City & oliver.White_River_City
+        
+        tymborlyn.White_River_City --> Talia_Princemoore & Talia_Princemoore_Staff
+
+        pascal.White_River_City --> Tony_Pascal & Dylan_Pascal
+
+        stone.White_River_City --> Douglass_Stone & Laura_Stone & Brandley_Stone
+
+
+
         
         
+        oliver.White_River_City --> Rupert_Oliver & Candice_Oliver & Gary_Oliver
+
+
+
+
+        dontswimuphill.locations.Cicada_Cove --> porter.Cicada_Cove
         
-        membersInArc --> artsmart;
-        membersInArc --> awestone;
+        dontswimuphill.locations.Oakenvilleburg --> carson.Oakenvilleburg
         
-        membersInArc --> botanifanatic;
-        subgraph membersInArc;
-        direction LR
+        dontswimuphill.locations.Spitshire_Grove --> hernandez.Spitshire_Grove
+        
+        dontswimuphill.locations.Santa_Mesa --> stone.Santa_Mesa & oliver.Santa_Mesa
+        
+        dontswimuphill.locations.New_Lake_Falls --> stone.New_Lake_Falls
+        
+        dontswimuphill.locations.Snakecave_Mounds --> south.Snakecave_Mounds
+        
+        dontswimuphill.locations.Estrada_Beach --> rothstone.Estrada_Beach
 
-            subgraph botanifanatic
-                botanifanatic.full_name--> Laurie_Kozlowski
-            end
 
-            subgraph kimmy911
-                kimmy911.full_name--> Kim_Feinhorn
-                kimmy911.media --> cyber_attack_2020.newspaper.jpg
-            end
-
-            subgraph mysticaldave
-                mysticaldave.full_name--> Dave_Larson
-            end
-
-            subgraph westsideriot
-                westsideriot.full_name--> Rodney_Lewis
-            end
-
-            subgraph awestone
-                awestone.full_name--> Connor_MacPhain
-            end
-
-            subgraph artsmart
-                artsmart.full_name-->  Travis_Conrad
-            end
-        end
+        
+    
     end
 
 
+    subgraph switchboard_data;
+    end
 
-    membersInArc --> kimmy911
-    membersInArc --> mysticaldave
-    membersInArc --> westsideriot
+    subgraph blurtout_data;
+        blurtout_website --> blurtout.important_media & blurtout.members & blurtout.clues
+        blurtout.clues --> cyber_attack_2020
+        cyber_attack_2020 --> newspaper.jpg
+        blurtout.important_media[Important Media] --> newspaper.jpg
+        blurtout.members --> locations
+        locations --> White_River_City;
+        White_River_City --> artsmart & awestone & botanifanatic & kimmy911 & mysticaldave & westsideriot 
 
+        kimmy911--> Kim_Feinhorn
+        kimmy911--> newspaper.jpg
+        
+        
+        artsmart--> Travis_Conrad;
+        awestone--> Connor_MacPhain;
+        botanifanatic--> Laurie_Kozlowski;
+
+
+        mysticaldave --> Dave_Larson
+        westsideriot --> Rodney_Lewis
+    end
 
 ```
